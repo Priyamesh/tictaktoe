@@ -4,8 +4,8 @@
     margin: 0;
 }
 nav{
-    background-color: aquamarine;
-    color:black;
+    background-color: black;
+    color:whitesmoke;
     height: 65px;
     font-size: 28px;
     display: flex;
@@ -88,7 +88,7 @@ nav ul{
     margin: 0 25px;
     padding: 5px 5px;
     border-radius: 5px;
-    background-color: rgb(196, 159, 231);
+    background-color: rgb(215, 202, 226);
     cursor: pointer;
     font-size: 16px;
     font-weight: bolder;
@@ -103,6 +103,9 @@ nav ul{
     }
     .gameInfo{
         margin-top: 40px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
     }
     /* .container{
         grid-template-rows: repeat(3, 20vw);

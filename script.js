@@ -5,6 +5,8 @@ let turnaudio= new Audio("ting.mp3");
 let gameover= new Audio("gameover.mp3");
 let turn="X";
 let isgameover=false;
+let playerx=0;
+let player0=0;
 
 
 //chang turn
@@ -21,12 +23,24 @@ const checkwin=()=>{
     wins.forEach((e)=> {
             if ((boxtexts[e[0]].innerText === boxtexts[e[1]].innerText) && (boxtexts[e[1]].innerText === boxtexts[e[2]].innerText) && (boxtexts[e[0]].innerText !== "")) {
                 document.querySelector('.info').innerHTML = `${boxtexts[e[0]].innerText} Won`;
-                console.log(boxtexts[e[0]].innerText);
                 isgameover = true;
                 document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width="200px";
                 document.querySelector('.line').style.width="36vw";
                 document.querySelector('.line').style.transform=`translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`;
                 gameover.play();
+
+                if(boxtexts[e[0]].innerText==='X')
+                    playerx++;
+                else
+                    player0++;
+                
+                document.getElementById('player1').textContent=playerx;
+                document.getElementById('player2').textContent=player0;
+                
+                setTimeout(function(){
+                    reset.click();
+                }, 2000); 
+                
             }
         });
 };

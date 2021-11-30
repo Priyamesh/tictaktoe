@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -11,7 +11,7 @@ nav{
     display: flex;
     align-items: center;
     padding: 0 12px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Baloo Da 2', cursive;
 }
 
 nav ul{
@@ -62,13 +62,38 @@ nav ul{
     
 }
 
+.score{
+    font-size: 1.5rem;
+    font-family:monospace;
+}
+
 .gameInfo{
+    font-family: 'Baloo Da 2', cursive;
     padding:0px 30px;
+}
+
+h1{
+    font-size: 2.2rem;
 }
 
 .imgbox img{
     width: 0px;
-    transition: width 0.5s ease-in-out;
+    transition: width linear;
+}
+
+.info{
+    font-size: 1.2rem;
+}
+
+#reset{
+    margin: 0 25px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bolder;
 }
 
 .bt-0{
@@ -83,17 +108,6 @@ nav ul{
 .bl-0{
     border-left: 0;
 }
-
-#reset{
-    margin: 0 25px;
-    padding: 5px 5px;
-    border-radius: 5px;
-    background-color: rgb(215, 202, 226);
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bolder;
-}
-
 
 
 @media screen and (max-width: 950px)

@@ -18,7 +18,7 @@ const changeturn=()=>{
 const checkwin=()=>{
     let boxtexts=document.getElementsByClassName('boxtext');
     let wins=[ [0,1,2,0,6,0], [3,4,5,0,18,0], [6,7,8,0,30,0], 
-                [0,3,6,12,18,90], [1,4,7,0,18,90], [2,5,8,12,18,90], 
+                [0,3,6,-12,18,90], [1,4,7,0,18,90], [2,5,8,12,18,90], 
                 [0,4,8,0,18,45], [2,4,6,0,18,135] ];
     wins.forEach((e)=> {
             if ((boxtexts[e[0]].innerText === boxtexts[e[1]].innerText) && (boxtexts[e[1]].innerText === boxtexts[e[2]].innerText) && (boxtexts[e[0]].innerText !== "")) {
@@ -61,6 +61,7 @@ Array.from(boxes).forEach(element => {
     
 });
 
+//reset button
 let reset=document.querySelector('#reset');
 reset.addEventListener('click',()=>{
     let boxtexts=document.getElementsByClassName('boxtext')
